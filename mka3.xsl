@@ -70,6 +70,7 @@
     <!-- Plan -->
 
     <xsl:template match="plan">
+        <span class="section_title">Plan</span>
         <ul>
             <xsl:apply-templates select="item" />
         </ul>
@@ -78,6 +79,7 @@
     <!-- Checks -->
 
     <xsl:template match="checks">
+        <span class="section_title">Checks</span>
         <ul>
             <xsl:apply-templates select="item" />
         </ul>
@@ -86,7 +88,7 @@
     <!-- Issues -->
 
     <xsl:template match="issues">
-        <span class="table_title">Issues</span>
+        <span class="section_title">Issues</span>
         <table>
             <thead>
                 <tr>
@@ -114,6 +116,7 @@
     <!-- Risks -->
 
     <xsl:template match="risks">
+        <span class="section_title">Risks</span>
         <table>
             <thead>
                 <tr>
