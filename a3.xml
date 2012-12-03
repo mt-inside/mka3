@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a3 project="SQL Source Control" author="Matt Turner">
+    <plan>
+        <stratagem>
+            <goal>80% of users will have to wait no more than 10s for any commit or retrieve operation bu the end of Q2</goal>
+            <last4weeks>
+                <item>Released async commit feature and static data performance improvements</item>
+            </last4weeks>
+            <next4weeks>
+                <item>Released in July</item>
+                <item>No more performance work planned</item>
+            </next4weeks>
+            <next2months></next2months>
+        </stratagem>
+    </plan>
+    <checks>
+        <item>Downloads are showing good increases, from 300 in May to 360 in June and 470 in July.</item>
+    </checks>
+    <issues>
+        <issue>
+            <name>On some days there are no developers working on SoC (when Jeff is HoSE)</name>
+            <impact>H</impact>
+            <action>New graduate developer to start with the team in September</action>
+            <resolution>August</resolution>
+            <owner>MT, AE</owner>
+        </issue>
+    </issues>
+    <risks>
+        <risk>
+            <name>Reduced team size - developer work will become significant bottleneck</name>
+            <likelihood>H</likelihood>
+            <impact>H</impact>
+            <action>New graduate developer to be recruited for the team in September</action>
+            <resolution>September</resolution>
+            <owner>MT, AE</owner>
+        </risk>
+    </risks>
+    <improvements>
+        <improvement>
+            <name>Allocated area of the project whiteboard for team to add issues arising from the recent team changes</name>
+            <status>DONE</status>
+        </improvement>
+        <improvement>
+            <name>Compare Team providing stable engine build for SoC to use while they work on SQL2012</name>
+            <status>DONE</status>
+        </improvement>
+        <improvement>
+            <name>Team only taking stories of 5 Story Points of fewer into a sprint</name>
+            <status>DONE</status>
+        </improvement>
+        <improvement>
+            <name>In order to get all tests green, the team are performing Root Cause Analysis on one intermittenly failing test per day</name>
+            <status>DOING</status>
+        </improvement>
+        <improvement>
+            <name>The team is beginning to use ReviewBoard for async code reviews so they are better able to maintain flow</name>
+            <status>DOING</status>
+        </improvement>
+    </improvements>
+    <recognition>
+        <item>TEST</item>
+    </recognition>
+    <summary>
+        <item>Team has been focussing on our teamwork goal, working on the known/unknown feature.</item>
+        <item>SoC v3.0.13 has been released, containing several performance improvements and a survey that's shown on uninstall.</item>
+        <item>MT has taken over most of the Project Management responsibilities from CS.</item>
+        <item>Team's capacity remains reduced in August with MT not doing development and the new developer yet to start.</item>
+        <item>CVT is getting up to speed and doing some dev work as well as test.</item>
+    </summary>
+    <snapshot>
+        <item>The team are still feeling the effects of changes in the SQL Tools division.</item>
+        <item>Goals have not yet been re-aligned to the reduced team size.</item>
+        <item>Team's ability to support sales and customers is also suffering.</item>
+        <item>The next grad dev starting at Red Gate will be joining the team, but he will be the only one in the medium-term.</item>
+    </snapshot>
+    <escalations>
+        <item>TEST</item>
+    </escalations>
+</a3>
