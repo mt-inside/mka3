@@ -86,13 +86,16 @@
     <!-- Issues -->
 
     <xsl:template match="issues">
+        <span class="table_title">Issues</span>
         <table>
             <thead>
-                <td>Issue</td>
-                <td>Impact</td>
-                <td>Action</td>
-                <td>Resolution</td>
-                <td>Owner</td>
+                <tr>
+                    <th>Issue</th>
+                    <th>Impact</th>
+                    <th>Action</th>
+                    <th>Resolution</th>
+                    <th>Owner</th>
+                </tr>
             </thead>
             <xsl:apply-templates match="issue" />
         </table>
@@ -113,12 +116,14 @@
     <xsl:template match="risks">
         <table>
             <thead>
-                <td>Risk</td>
-                <td>Likeli</td>
-                <td>Impact</td>
-                <td>Action</td>
-                <td>Resolution</td>
-                <td>Owner</td>
+                <tr>
+                    <th>Risk</th>
+                    <th>Likeli</th>
+                    <th>Impact</th>
+                    <th>Action</th>
+                    <th>Resolution</th>
+                    <th>Owner</th>
+                </tr>
             </thead>
             <xsl:apply-templates match="risk" />
         </table>
