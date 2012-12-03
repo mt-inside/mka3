@@ -3,7 +3,6 @@
 div
 {
     position: absolute;
-    border: solid 2px;
 }
 
 div#plan
@@ -12,8 +11,6 @@ div#plan
     left:     0px;
     width:  600px;
     height: 700px;
-
-    border-color: red;
 }
 
 div#checks
@@ -22,8 +19,6 @@ div#checks
     left:     0px;
     width:  600px;
     height: 300px;
-
-    border-color: yellow;
 }
 
 div#issues
@@ -32,8 +27,6 @@ div#issues
     left:   600px;
     width:  600px;
     height: 350px;
-
-    border-color: green;
 }
 
 div#risks
@@ -42,8 +35,6 @@ div#risks
     left:   600px;
     width:  600px;
     height: 350px;
-
-    border-color: blue;
 }
 
 div#improvements
@@ -52,8 +43,6 @@ div#improvements
     left:   600px;
     width:  600px;
     height: 150px;
-
-    border-color: red;
 }
 
 div#recognition
@@ -62,8 +51,6 @@ div#recognition
     left:   600px;
     width:  600px;
     height: 150px;
-
-    border-color: yellow;
 }
 
 div#title
@@ -72,8 +59,6 @@ div#title
     left:   1200px;
     width:  300px;
     height: 100px;
-
-    border-color: red;
 }
 
 div#summary
@@ -82,8 +67,6 @@ div#summary
     left:   1200px;
     width:  300px;
     height: 300px;
-
-    border-color: yellow;
 }
 
 div#snapshot
@@ -92,8 +75,6 @@ div#snapshot
     left:   1200px;
     width:  300px;
     height: 300px;
-
-    border-color: green;
 }
 
 div#escalations
@@ -102,8 +83,6 @@ div#escalations
     left:   1200px;
     width:  300px;
     height: 150px;
-
-    border-color: blue;
 }
 
 div#icons
@@ -112,15 +91,4 @@ div#icons
     left:   1200px;
     width:  300px;
     height: 150px;
-
-    border-color: purple;
-}
-
-li.done
-{
-    color: gray;
-}
-li.doing
-{
-    color: black;
 }

@@ -13,7 +13,8 @@
     <html>
         <title><xsl:value-of select="@project" /> A3 Report</title>
         <head>
-            <link rel="stylesheet" href="a3.css" />
+            <link rel="stylesheet" href="layout.css" />
+            <link rel="stylesheet" href="presentation.css" />
         </head>
 
         <body>

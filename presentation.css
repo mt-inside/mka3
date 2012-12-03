@@ -1,0 +1,68 @@
+div
+{
+    border: solid 2px;
+}
+
+div#plan
+{
+    border-color: red;
+}
+
+div#checks
+{
+    border-color: yellow;
+}
+
+div#issues
+{
+    border-color: green;
+}
+
+div#risks
+{
+    border-color: blue;
+}
+
+div#improvements
+{
+    border-color: red;
+}
+
+div#recognition
+{
+    border-color: yellow;
+}
+
+div#title
+{
+    border-color: red;
+}
+
+div#summary
+{
+    border-color: yellow;
+}
+
+div#snapshot
+{
+    border-color: green;
+}
+
+div#escalations
+{
+    border-color: blue;
+}
+
+div#icons
+{
+    border-color: purple;
+}
+
+li.done
+{
+    color: gray;
+}
+li.doing
+{
+    color: black;
+}
