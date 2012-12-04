@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<risks>
+    <risk>
+        <name>DANGER! DANGER!</name>
+        <likelihood>H</likelihood>
+        <impact>H</impact>
+        <action>New graduate developer to be recruited for the team in September</action>
+        <resolution>September</resolution>
+        <owner>MT, AE</owner>
+    </risk>
+    <risk>
+        <name>Don't worrk</name>
+        <likelihood>L</likelihood>
+        <impact>L</impact>
+        <action>New graduate developer to be recruited for the team in September</action>
+        <resolution>September</resolution>
+        <owner>MT, AE</owner>
+    </risk>
+    <risk>
+        <name>maybe./..</name>
+        <likelihood>M</likelihood>
+        <impact>M</impact>
+        <action>New graduate developer to be recruited for the team in September</action>
+        <resolution>September</resolution>
+        <owner>MT, AE</owner>
+    </risk>
+</risks>

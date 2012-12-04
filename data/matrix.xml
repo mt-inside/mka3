@@ -1,0 +1,23 @@
+<root>
+    <col title="left">
+        <cell>DVCS migrations</cell>
+        <cell>SoC licence sales increase</cell>
+        <cell>delier soc with first class DVCS</cell>
+        <cell>considered lots of ideas for new migs functionality</cell>
+        <cell>support other DVCSen</cell>
+    </col>
+    <col title="middle">
+        <cell>cross-branch mig scripts</cell>
+        <cell>sessation of user requests</cell>
+        <cell>deliver SoC and SCE with cross-branch migs stupport</cell>
+        <cell>considered lots of ideas for new migs functionality</cell>
+        <cell>support migs fro SQL azure</cell>
+    </col>
+    <col>
+        <cell>Support DM off-line deployments of dbs</cell>
+        <cell>DM will be able to implement dynamic db deployments</cell>
+        <cell>deliver a SoC that packages enough info in the migs folder to build a dep package without calling back to VCS</cell>
+        <cell>not started; low priority</cell>
+        <cell></cell>
+    </col>
+</root>

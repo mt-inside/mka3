@@ -76,20 +76,21 @@
 
     <!-- Sections -->
 
+    <!--
+      "*[name() = $title]" (all nodes such that the name is $title) is the closest xslt comes to an eval() function.
+      alternativley, take a node-set param and reverse-lookup the name, i.e. $title = <xsl:value-of select="name($nodes)" />
+    -->
     <xsl:template name="section">
         <xsl:param name="title" />
+        <xsl:variable name="nodes" select="document(concat('data/', $title, '.xml'))/*[name() = $title]" />
 
-        <!--
-          "*[name() = $title]" (all nodes such that the name is $title) is the closest xslt comes to an eval() function.
-          alternativley, take a node-set param and reverse-lookup the name, i.e. $title = <xsl:value-of select="name($nodes)" />
-        -->
         <div class="section_outer">
             <xsl:attribute name="id"><xsl:value-of select="$title" /></xsl:attribute>
             <div class="section_inner">
                 <xsl:call-template name="title">
                     <xsl:with-param name="title"><xsl:value-of select="$title" /></xsl:with-param>
                 </xsl:call-template>
-                <xsl:apply-templates select="*[name() = $title]" />
+                <xsl:apply-templates select="$nodes" />
             </div>
         </div>
     </xsl:template>

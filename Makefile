@@ -1,4 +1,4 @@
-a3.html: a3.xml *.xsl
+a3.html: data/a3.xml data/*.xml *.xsl
 	xsltproc --stringparam date "`date "+%d %B %Y"`" mka3.xsl $< > $@
 
 clean:

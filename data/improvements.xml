@@ -1,0 +1,22 @@
+<improvements>
+    <improvement>
+        <name>Allocated area of the project whiteboard for team to add issues arising from the recent team changes</name>
+        <status>DONE</status>
+    </improvement>
+    <improvement>
+        <name>Compare Team providing stable engine build for SoC to use while they work on SQL2012</name>
+        <status>DONE</status>
+    </improvement>
+    <improvement>
+        <name>Team only taking stories of 5 Story Points of fewer into a sprint</name>
+        <status>DONE</status>
+    </improvement>
+    <improvement>
+        <name>In order to get all tests green, the team are performing Root Cause Analysis on one intermittenly failing test per day</name>
+        <status>DOING</status>
+    </improvement>
+    <improvement>
+        <name>The team is beginning to use ReviewBoard for async code reviews so they are better able to maintain flow</name>
+        <status>DOING</status>
+    </improvement>
+</improvements>
