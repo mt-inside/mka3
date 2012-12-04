@@ -13,57 +13,86 @@
     <html>
         <title><xsl:value-of select="@project" /> A3 Report</title>
         <head>
-            <link rel="stylesheet" href="a3.css" />
+            <link rel="stylesheet" href="layout.css" />
+            <link rel="stylesheet" href="presentation.css" />
         </head>
 
         <body>
-            <div id="title">
+            <div id="title" class="section_outer">
                 <p class="title"><xsl:value-of select="@project" /></p>
                 <p class="subtitle"><xsl:value-of select="$date" /></p>
-                <p class="subtitle">Author: <xsl:value-of select="@author" /></p>
+                <p class="subtitle"><xsl:value-of select="@author" /></p>
             </div>
 
-            <div id="plan">
-                <xsl:apply-templates select="plan" />
-            </div>
+            <xsl:call-template name="section">
+                <xsl:with-param name="title">plan</xsl:with-param>
+            </xsl:call-template>
 
-            <div id="checks">
-                <xsl:apply-templates select="checks" />
-            </div>
+            <xsl:call-template name="section">
+                <xsl:with-param name="title">checks</xsl:with-param>
+            </xsl:call-template>
 
-            <div id="issues">
-                <xsl:apply-templates select="issues" />
-            </div>
+            <xsl:call-template name="section">
+                <xsl:with-param name="title">issues</xsl:with-param>
+            </xsl:call-template>
 
-            <div id="risks">
-                <xsl:apply-templates select="risks" />
-            </div>
+            <xsl:call-template name="section">
+                <xsl:with-param name="title">risks</xsl:with-param>
+            </xsl:call-template>
 
-            <div id="improvements">
-                <xsl:apply-templates select="improvements" />
-            </div>
+            <xsl:call-template name="section">
+                <xsl:with-param name="title">improvements</xsl:with-param>
+            </xsl:call-template>
 
-            <div id="recognition">
-                <xsl:apply-templates select="recognition" />
-            </div>
+            <xsl:call-template name="section">
+                <xsl:with-param name="title">recognition</xsl:with-param>
+            </xsl:call-template>
 
-            <div id="summary">
-                <xsl:apply-templates select="summary" />
-            </div>
+            <xsl:call-template name="section">
+                <xsl:with-param name="title">summary</xsl:with-param>
+            </xsl:call-template>
 
-            <div id="snapshot">
-                <xsl:apply-templates select="snapshot" />
-            </div>
+            <xsl:call-template name="section">
+                <xsl:with-param name="title">snapshot</xsl:with-param>
+            </xsl:call-template>
 
-            <div id="escalations">
-                <xsl:apply-templates select="escalations" />
-            </div>
+            <xsl:call-template name="section">
+                <xsl:with-param name="title">escalations</xsl:with-param>
+            </xsl:call-template>
 
-            <div id="icons">
-            </div>
+            <xsl:call-template name="section">
+                <xsl:with-param name="title">icons</xsl:with-param>
+            </xsl:call-template>
 
         </body>
     </html>
+    </xsl:template>
+
+    <!-- Sections -->
+
+    <xsl:template name="section">
+        <xsl:param name="title" />
+
+        <!--
+          "*[name() = $title]" (all nodes such that the name is $title) is the closest xslt comes to an eval() function.
+          alternativley, take a node-set param and reverse-lookup the name, i.e. $title = <xsl:value-of select="name($nodes)" />
+        -->
+        <div class="section_outer">
+            <xsl:attribute name="id"><xsl:value-of select="$title" /></xsl:attribute>
+            <div class="section_inner">
+                <xsl:call-template name="title">
+                    <xsl:with-param name="title"><xsl:value-of select="$title" /></xsl:with-param>
+                </xsl:call-template>
+                <xsl:apply-templates select="*[name() = $title]" />
+            </div>
+        </div>
+    </xsl:template>
+
+    <!-- Section titles -->
+
+    <xsl:template name="title">
+        <xsl:param name="title" />
+        <div class="section_title"><span><xsl:value-of select="$title" /></span></div>
     </xsl:template>
 
     <!-- Plan -->
@@ -87,11 +116,13 @@
     <xsl:template match="issues">
         <table>
             <thead>
-                <td>Issue</td>
-                <td>Impact</td>
-                <td>Action</td>
-                <td>Resolution</td>
-                <td>Owner</td>
+                <tr>
+                    <th>Issue</th>
+                    <th>Impact</th>
+                    <th>Action</th>
+                    <th>Resolution</th>
+                    <th>Owner</th>
+                </tr>
             </thead>
             <xsl:apply-templates match="issue" />
         </table>
@@ -112,12 +143,14 @@
     <xsl:template match="risks">
         <table>
             <thead>
-                <td>Risk</td>
-                <td>Likeli</td>
-                <td>Impact</td>
-                <td>Action</td>
-                <td>Resolution</td>
-                <td>Owner</td>
+                <tr>
+                    <th>Risk</th>
+                    <th>Likeli</th>
+                    <th>Impact</th>
+                    <th>Action</th>
+                    <th>Resolution</th>
+                    <th>Owner</th>
+                </tr>
             </thead>
             <xsl:apply-templates match="risk" />
         </table>
