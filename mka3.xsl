@@ -250,6 +250,39 @@
         </ul>
     </xsl:template>
 
+    <!-- Icons -->
+
+    <xsl:template match="icons">
+        <table>
+            <tr>
+                <td colspan="2">Goals</td>
+                <td colspan="2">People</td>
+                <td colspan="1">CI</td>
+            </tr>
+            <tr>
+                <td>Clear Goals</td>
+                <td>Clear Roadmap</td>
+                <td>Right People</td>
+                <td>Morale</td>
+                <td>Doing CI</td>
+            </tr>
+            <tr>
+                <td><img><xsl:attribute name="src">img/<xsl:value-of select="goals" />.png</xsl:attribute></img></td>
+                <td><img><xsl:attribute name="src">img/<xsl:value-of select="roadmap" />.png</xsl:attribute></img></td>
+                <td><img><xsl:attribute name="src">img/<xsl:value-of select="people" />.png</xsl:attribute></img></td>
+                <td><img><xsl:attribute name="src">img/<xsl:value-of select="morale" />.png</xsl:attribute></img></td>
+                <td><img><xsl:attribute name="src">img/<xsl:value-of select="ci" />.png</xsl:attribute></img></td>
+            </tr>
+            <tr>
+                <td>callout</td>
+                <td>callout</td>
+                <td>callout</td>
+                <td>callout</td>
+                <td>callout</td>
+            </tr>
+        </table>
+    </xsl:template>
+
     <!-- Utils -->
 
     <xsl:template match="item">
