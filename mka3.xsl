@@ -21,7 +21,7 @@
             <div id="title" class="section_outer">
                 <p class="title"><xsl:value-of select="@project" /></p>
                 <p class="subtitle"><xsl:value-of select="$date" /></p>
-                <p class="subtitle">Author: <xsl:value-of select="@author" /></p>
+                <p class="subtitle"><xsl:value-of select="@author" /></p>
             </div>
 
             <xsl:call-template name="section">
