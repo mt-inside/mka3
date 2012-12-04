@@ -8,6 +8,17 @@ div.section_inner
     position: relative;
     width: 100%;
     height: 100%;
+
+    overflow: hidden;
+}
+
+ul
+{
+    padding: 2px;
+}
+li
+{
+    list-style-position: inside;
 }
 
 li.done
