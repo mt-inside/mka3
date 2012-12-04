@@ -11,8 +11,6 @@
          confuse position() -->
     <xsl:strip-space elements="*" />
 
-    <xsl:include href="matrix-transpose.xsl" />
-
     <func:function name="myspace:severity_char2rank">
         <xsl:param name="char" />
         <func:result select="
@@ -117,9 +115,7 @@
 
     <!-- Plan -->
 
-    <xsl:template match="plan">
-        <xsl:apply-templates select="root" />
-    </xsl:template>
+    <xsl:include href="render-plan.xsl" />
 
     <!-- Checks -->
 
