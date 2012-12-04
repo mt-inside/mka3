@@ -31,6 +31,13 @@
     <issues>
         <issue>
             <name>On some days there are no developers working on SoC (when Jeff is HoSE)</name>
+            <impact>M</impact>
+            <action>New graduate developer to start with the team in September</action>
+            <resolution>August</resolution>
+            <owner>MT, AE</owner>
+        </issue>
+        <issue>
+            <name>Issue TWO</name>
             <impact>H</impact>
             <action>New graduate developer to start with the team in September</action>
             <resolution>August</resolution>
