@@ -4,10 +4,12 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns="http://www.w3.org/1999/xhtml">
 
+    <xsl:include href="matrix-transpose.xsl" />
+
     <!-- no current-date() function in xslt 1.0. No xslt 2.0 proc in cygwin -->
     <xsl:param name="date" />
 
-    <xsl:output method="html" />
+    <xsl:output method="html" version="4.0" indent="yes" encoding="UTF-8" />
 
     <xsl:template match="/a3">
     <html>
@@ -98,9 +100,7 @@
     <!-- Plan -->
 
     <xsl:template match="plan">
-        <ul>
-            <xsl:apply-templates select="item" />
-        </ul>
+        <xsl:apply-templates select="root" />
     </xsl:template>
 
     <!-- Checks -->

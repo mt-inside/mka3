@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <a3 project="SQL Source Control" author="Matt Turner">
     <plan>
-        <stratagem>
-            <goal>80% of users will have to wait no more than 10s for any commit or retrieve operation bu the end of Q2</goal>
-            <last4weeks>
-                <item>Released async commit feature and static data performance improvements</item>
-            </last4weeks>
-            <next4weeks>
-                <item>Released in July</item>
-                <item>No more performance work planned</item>
-            </next4weeks>
-            <next2months></next2months>
-        </stratagem>
+        <root>
+            <col title="left">
+                <cell>DVCS migrations</cell>
+                <cell>SoC licence sales increase</cell>
+                <cell>delier soc with first class DVCS</cell>
+                <cell>considered lots of ideas for new migs functionality</cell>
+                <cell>support other DVCSen</cell>
+            </col>
+            <col title="middle">
+                <cell>cross-branch mig scripts</cell>
+                <cell>sessation of user requests</cell>
+                <cell>deliver SoC and SCE with cross-branch migs stupport</cell>
+                <cell>considered lots of ideas for new migs functionality</cell>
+                <cell>support migs fro SQL azure</cell>
+            </col>
+            <col title="right">
+                <cell>Support DM off-line deployments of dbs</cell>
+                <cell>DM will be able to implement dynamic db deployments</cell>
+                <cell>deliver a SoC that packages enough info in the migs folder to build a dep package without calling back to VCS</cell>
+                <cell>not started; low priority</cell>
+                <cell></cell>
+            </col>
+        </root>
     </plan>
     <checks>
         <item>Downloads are showing good increases, from 300 in May to 360 in June and 470 in July.</item>
