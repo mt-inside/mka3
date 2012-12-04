@@ -4,6 +4,10 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns="http://www.w3.org/1999/xhtml">
 
+    <!-- Strip whitespace in input, otherwise we get spurious #text nodes that
+         confuse position() -->
+    <xsl:strip-space elements="*" />
+
     <xsl:include href="matrix-transpose.xsl" />
 
     <!-- no current-date() function in xslt 1.0. No xslt 2.0 proc in cygwin -->
@@ -130,6 +134,12 @@
 
     <xsl:template match="issue">
         <tr>
+            <xsl:attribute name="class">
+                <xsl:choose>
+                    <xsl:when test="position() mod 2 = 1">odd</xsl:when>
+                    <xsl:otherwise>even</xsl:otherwise>
+                </xsl:choose>
+            </xsl:attribute>
             <td><xsl:value-of select="name" /></td>
             <td><xsl:value-of select="impact" /></td>
             <td><xsl:value-of select="action" /></td>
@@ -158,6 +168,12 @@
 
     <xsl:template match="risk">
         <tr>
+            <xsl:attribute name="class">
+                <xsl:choose>
+                    <xsl:when test="position() mod 2 = 1">odd</xsl:when>
+                    <xsl:otherwise>even</xsl:otherwise>
+                </xsl:choose>
+            </xsl:attribute>
             <td><xsl:value-of select="name" /></td>
             <td><xsl:value-of select="likelihood" /></td>
             <td><xsl:value-of select="impact" /></td>

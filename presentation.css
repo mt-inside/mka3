@@ -45,3 +45,8 @@ div.section_title > span
     text-transform: uppercase;
     color: white;
 }
+
+tr.even
+{
+    background-color: lightgrey;
+}
