@@ -1,94 +1,96 @@
-/* Document nominally 1500x1000
- */
 div
 {
     position: absolute;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 div#plan
 {
-    top:      0px;
-    left:     0px;
-    width:  600px;
-    height: 700px;
+    top:     0%;
+    left:    0%;
+    width:  40%;
+    height: 70%;
 }
 
 div#checks
 {
-    top:    700px;
-    left:     0px;
-    width:  600px;
-    height: 300px;
+    top:    70%;
+    left:    0%;
+    width:  40%;
+    height: 30%;
 }
 
 div#issues
 {
-    top:      0px;
-    left:   600px;
-    width:  600px;
-    height: 350px;
+    top:     0%;
+    left:   40%;
+    width:  40%;
+    height: 35%;
 }
 
 div#risks
 {
-    top:    350px;
-    left:   600px;
-    width:  600px;
-    height: 350px;
+    top:    35%;
+    left:   40%;
+    width:  40%;
+    height: 35%;
 }
 
 div#improvements
 {
-    top:    700px;
-    left:   600px;
-    width:  600px;
-    height: 150px;
+    top:    70%;
+    left:   40%;
+    width:  40%;
+    height: 15%;
 }
 
 div#recognition
 {
-    top:    850px;
-    left:   600px;
-    width:  600px;
-    height: 150px;
+    top:    85%;
+    left:   40%;
+    width:  40%;
+    height: 15%;
 }
 
 div#title
 {
-    top:      0px;
-    left:   1200px;
-    width:  300px;
-    height: 100px;
+    top:     0%;
+    left:   80%;
+    width:  20%;
+    height: 10%;
 }
 
 div#summary
 {
-    top:    100px;
-    left:   1200px;
-    width:  300px;
-    height: 300px;
+    top:    10%;
+    left:   80%;
+    width:  20%;
+    height: 30%;
 }
 
 div#snapshot
 {
-    top:    400px;
-    left:   1200px;
-    width:  300px;
-    height: 300px;
+    top:    40%;
+    left:   80%;
+    width:  20%;
+    height: 30%;
 }
 
 div#escalations
 {
-    top:    700px;
-    left:   1200px;
-    width:  300px;
-    height: 150px;
+    top:    70%;
+    left:   80%;
+    width:  20%;
+    height: 15%;
 }
 
 div#icons
 {
-    top:    850px;
-    left:   1200px;
-    width:  300px;
-    height: 150px;
+    top:    85%;
+    left:   80%;
+    width:  20%;
+    height: 15%;
 }

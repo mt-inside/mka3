@@ -1,63 +1,25 @@
-/* Document nominally 1500x1000
- */
-div
+div.section_outer
 {
-    border: solid 2px;
+    padding: 5px;
+}
+div.section_inner
+{
+    border: 2px solid lightgrey;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
 }
 
-div#plan
+ul
 {
-    border-color: red;
+    margin: 0px;
+    padding: 2px;
 }
-
-div#checks
+li
 {
-    border-color: yellow;
-}
-
-div#issues
-{
-    border-color: green;
-}
-
-div#risks
-{
-    border-color: blue;
-}
-
-div#improvements
-{
-    border-color: red;
-}
-
-div#recognition
-{
-    border-color: yellow;
-}
-
-div#title
-{
-    border-color: red;
-}
-
-div#summary
-{
-    border-color: yellow;
-}
-
-div#snapshot
-{
-    border-color: green;
-}
-
-div#escalations
-{
-    border-color: blue;
-}
-
-div#icons
-{
-    border-color: purple;
+    list-style-position: inside;
 }
 
 li.done
@@ -67,4 +29,19 @@ li.done
 li.doing
 {
     color: black;
+}
+
+div.section_title
+{
+    background-color: lightgrey;
+    position: relative;
+    width: 100%;
+}
+
+div.section_title > span
+{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
 }
