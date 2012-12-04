@@ -4,7 +4,7 @@ div.section_outer
 }
 div.section_inner
 {
-    border: 2px solid lightgrey;
+    border: 2px solid lightblue;
     position: relative;
     width: 100%;
     height: 100%;
@@ -33,7 +33,7 @@ li.doing
 
 div.section_title
 {
-    background-color: lightgrey;
+    background-color: lightblue;
     position: relative;
     width: 100%;
 }
