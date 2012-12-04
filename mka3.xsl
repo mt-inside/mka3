@@ -2,6 +2,9 @@
 <xsl:stylesheet
     version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:func="http://exslt.org/functions"
+    extension-element-prefixes="func"
+    xmlns:myspace="http://dev-matthewt.redgate.com"
     xmlns="http://www.w3.org/1999/xhtml">
 
     <!-- Strip whitespace in input, otherwise we get spurious #text nodes that
@@ -9,6 +12,16 @@
     <xsl:strip-space elements="*" />
 
     <xsl:include href="matrix-transpose.xsl" />
+
+    <func:function name="myspace:severity_char2rank">
+        <xsl:param name="char" />
+        <func:result select="
+            (($char='H') * 3) +
+            (($char='M') * 2) +
+            (($char='L') * 1)"
+        />
+    </func:function>
+
 
     <!-- no current-date() function in xslt 1.0. No xslt 2.0 proc in cygwin -->
     <xsl:param name="date" />
@@ -129,7 +142,9 @@
                     <th>Owner</th>
                 </tr>
             </thead>
-            <xsl:apply-templates match="issue" />
+            <xsl:apply-templates match="issue">
+                <xsl:sort data-type="number" order="descending" select="myspace:severity_char2rank(impact)" />
+            </xsl:apply-templates>
         </table>
     </xsl:template>
 
@@ -163,7 +178,9 @@
                     <th>Owner</th>
                 </tr>
             </thead>
-            <xsl:apply-templates match="risk" />
+            <xsl:apply-templates match="risk">
+                <xsl:sort data-type="number" order="descending" select="myspace:severity_char2rank(impact) * myspace:severity_char2rank(likelihood)" />
+            </xsl:apply-templates>
         </table>
     </xsl:template>
 
